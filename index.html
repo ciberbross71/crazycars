@@ -45,6 +45,36 @@
                 0 0 82px var(--crazy-fuchsia);
         }
 
+	.neon-green {
+	    color: #fff;
+	    text-shadow: 
+	        0 0 5px #fff,
+	        0 0 10px #39FF14,
+	        0 0 20px #39FF14,
+	        0 0 30px #39FF14;
+	}
+
+	.neon-green {
+	    color: #fff;
+	    font-family: 'Permanent Marker', cursive;
+	    text-shadow: 
+	        0 0 5px #fff,
+	        0 0 10px #39FF14,
+	        0 0 20px #39FF14,
+	        0 0 30px #39FF14;
+	}
+
+	.arco-curva {
+	    display: inline-block;
+	    transform: perspective(300px) rotateX(20deg) scale(1.2, 1);
+	    letter-spacing: 0.1em;
+	}
+
+	.curved-text {
+	    display: inline-block;
+	    transform: perspective(100px) rotateX(-15deg) scaleY(1.2);
+	    filter: drop-shadow(0 0 5px rgba(57, 255, 20, 0.5));
+	}
         .nav-bar {
             background-color: var(--crazy-fuchsia);
             box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
@@ -116,8 +146,8 @@
                 <li><a href="historia.html" class="nav-link px-3 py-2 block">Historia</a></li>
                 <li><a href="autos-locos.html" class="nav-link px-3 py-2 block">Autos Locos</a></li>
                 <li><a href="servicios.html" class="nav-link px-3 py-2 block">Servicios</a></li>
-                <li><a href="build.html" class="nav-link px-3 py-2 block">Podcast</a></li>
-                <li><a href="build.html" class="nav-link px-3 py-2 block">Tienda</a></li>
+                <li><a href="podcast.html" class="nav-link px-3 py-2 block">Podcast</a></li>
+                <li><a href="tienda.html" class="nav-link px-3 py-2 block">Tienda</a></li>
                 <li><a href="carrito.html" class="nav-link px-3 py-2 block"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
@@ -142,12 +172,51 @@
 </header>
 
 <main class="container mx-auto px-4 py-12 max-w-6xl">
-    <h2 class="text-3xl md:text-4xl text-center text-white mb-10 font-crazy" style="text-shadow: 2px 2px #FF00FF;">NUESTROS TRABAJOS</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="autos-locos.html" class="nav-link px-3 py-2 block"><img src="IMG_2771.png" alt="Autos_Locos" class="gallery-img w-full h-64 object-cover rounded-xl"></a>
-        <a href="build.html" class="nav-link px-3 py-2 block"><img src="IMG_2783.jpeg" alt="Restauración" class="gallery-img w-full h-64 object-cover rounded-xl"></a>
-        <a href="tienda.html" class="nav-link px-3 py-2 block"><img src="IMG_2829.jpeg" alt="Proceso" class="gallery-img w-full h-64 object-cover rounded-xl">
+    <h2 class="text-3xl md:text-4xl text-center text-white mb-10 font-crazy" style="text-shadow: 2px 2px #FF00FF;">SECCIONES</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+    
+    <div class="group relative overflow-hidden rounded-3xl border-4 border-[#FF00FF] shadow-2xl transition-all hover:scale-105 h-full flex flex-col">
+        <a href="autos-locos.html" class="flex-grow">
+            <img src="IMG_2771.png" class="h-80 w-full object-cover" alt="Autos Locos">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h3 class="font-crazy text-2xl uppercase">Autos Locos</h3>
+                <p class="text-sm font-bold uppercase tracking-widest text-[#40E0D0]">Nuestras Creaciones</p>
+            </div>
+        </a>
     </div>
+
+    <div class="group relative overflow-hidden rounded-3xl border-4 border-[#FF00FF] shadow-2xl transition-all hover:scale-105 h-full flex flex-col">
+        <a href="servicios.html" class="flex-grow">
+            <img src="IMG_2827.jpeg" class="h-80 w-full object-cover" alt="Servicios">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h3 class="font-crazy text-2xl uppercase">Podcast</h3>
+                <p class="text-sm font-bold uppercase tracking-widest text-[#40E0D0]">Chapa, Pintura y</p>
+		<p class="text-sm font-bold uppercase tracking-widest text-[#40E0D0]">muchas otras floritura.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="group relative overflow-hidden rounded-3xl border-4 border-[#FF00FF] shadow-2xl transition-all hover:scale-105 h-full">
+      <a href="tienda.html" class="block h-full">
+        <div class="absolute top-8 left-0 w-full z-20 text-center">
+            <h2 class="neon-green font-crazy text-4xl curved-text tracking-widest">TIENDA</h2>
+        </div>
+        
+        <img src="IMG_2829.jpeg" class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Tienda">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+        
+        <div class="absolute bottom-6 left-6 text-white">
+            <h3 class="font-crazy text-2xl uppercase">Tienda Online</h3>
+            <p class="text-sm font-bold uppercase tracking-widest text-[#40E0D0]">Accesorios & Merch</p>
+        </div>
+      </a>
+    </div>
+
+</div>
 </main>
 
 <footer class="bg-gray-900 text-white pt-10 pb-6 border-t-4 border-[#FF00FF]">
